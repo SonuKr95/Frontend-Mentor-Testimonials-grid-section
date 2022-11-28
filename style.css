@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+/* VARIABLES */
+
+:root {
+  --Moderate-violet: #7541c8;
+  --Very-dark-grayish-blue: #48556a;
+  --Very-dark-blackish-blue: #19212e;
+  --White: #ffffff;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: #edf2f8;
+  font-size: 1.3rem;
+  width: 100%;
+  min-height: 100vh;
+  color: var(--White);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-cont {
+  margin: 30px 0px;
+  max-width: 300px;
+  padding: 15px 20px;
+}
+
+.cont {
+  margin-bottom: 15px;
+  padding: 25px 15px;
+  border-radius: 10px;
+}
+
+.name {
+  margin-bottom: 15px;
+}
+
+.first {
+  background-image: url(/images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  background-color: var(--Moderate-violet);
+}
+.first img,
+.four img {
+  border: 2px solid rgb(182, 118, 246);
+}
+.second {
+  background-color: var(--Very-dark-grayish-blue);
+}
+.third {
+  background-color: var(--White);
+  color: var(--Very-dark-grayish-blue);
+}
+.four {
+  background-color: var(--Very-dark-blackish-blue);
+}
+.five {
+  background-color: var(--White);
+  color: var(--Very-dark-grayish-blue);
+}
+
+.name {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+  align-items: center;
+}
+.name img {
+  margin-right: 15px;
+  border-radius: 50%;
+  width: 30px;
+}
+/* .name > p {
+} */
+.grad {
+  opacity: 50%;
+}
+.para {
+  opacity: 70%;
+}
+.name ~ h3 {
+  margin-bottom: 1em;
+}
+@media only screen and (min-width: 700px) {
+  .main-cont {
+    display: grid;
+    max-width: 800px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    grid-template-rows: repeat(2, 300px);
+  }
+  .first {
+    grid-column: 1 /3;
+  }
+  .second {
+    grid-column: 3 /4;
+  }
+  .third {
+    grid-row: 2 /3;
+  }
+  .four {
+    grid-column: 2 /4;
+  }
+  .five {
+    grid-row: 1 /3;
+    grid-column: 4 /5;
+  }
+}
